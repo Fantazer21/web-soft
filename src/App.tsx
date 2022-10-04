@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import s from "./app.module.scss"
 
 function App() {
   return (
-    <div className="App">
+    <div className={s.App}>
 
     </div>
   );
