@@ -1,0 +1,13 @@
+@import "src/assets/styles/colors.scss";
+@mixin headerTitle {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+}
+
+@mixin title {
+  @include headerTitle;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 35px;
+  color: $grey1;
+}
