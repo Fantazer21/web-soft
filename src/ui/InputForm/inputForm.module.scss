@@ -1,0 +1,60 @@
+@import "src/assets/styles/mixins/fontsMixins.scss";
+@import "src/assets/styles/colors.scss";
+
+.inputWrapper {
+  margin-top: 35px;
+}
+
+.input {
+  width: 284px;
+  height: 36px;
+  left: 56px;
+  top: 124px;
+  background: $white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  @include label;
+  color: $grey1 ;
+  outline: none;
+
+  &_height {
+    height: 106px;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+}
+
+.inputTitleWrapper {
+  display: flex;
+}
+.inputTitle {
+  @include inputTitle;
+  margin-bottom: 10px;
+  margin-top: -3px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #FF8484;
+  border-radius: 4px;
+  margin-left: 1px;
+  margin-top: -4px;
+}
+
+.label {
+  @include label;
+  margin-top: -25px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+
+

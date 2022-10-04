@@ -11,3 +11,28 @@
   line-height: 35px;
   color: $grey1;
 }
+
+@mixin inputTitle {
+  @include headerTitle;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: $grey3;
+}
+
+@mixin label {
+  @include headerTitle;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $grey2;
+}
+@mixin buttonTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  color: $grey2;
+}
