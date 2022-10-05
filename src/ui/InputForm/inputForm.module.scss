@@ -51,9 +51,13 @@
 
 .label {
   @include label;
-  margin-top: -25px;
+  margin-top: 25px;
   margin-left: 16px;
   cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
 }
 
 

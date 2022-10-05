@@ -1,0 +1,35 @@
+@import "src/assets/styles/mixins/fontsMixins.scss";
+
+.dataComponent {
+  width: 332px;
+  height: 423px;
+  background: #FFFEFB;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  margin: 24px 10px 0 0;
+}
+
+.image {
+  width: 332px;
+  height: 200px;
+  background-color: #49485E;
+}
+
+.headerTitle {
+  @include dataHeader;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.content {
+  @include dataContent;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.price {
+  @include price;
+  color: $grey1;
+  margin-top: 32px;
+  margin-left: 16px;
+}

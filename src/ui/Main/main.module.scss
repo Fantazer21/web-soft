@@ -23,7 +23,7 @@
   background: #EEEEEE;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 15px;
   text-align: center;
   border: none;
   @include buttonTitle
@@ -32,11 +32,19 @@
 .button_active {
   width: 284px;
   height: 36px;
-  background: green;
+  background: #7BAE73;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 15px;
   text-align: center;
   border: none;
-  @include buttonTitle
+  @include buttonTitle;
+  color: white;
+}
+
+.dataWrapper {
+  max-width: 1030px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 16px;
 }

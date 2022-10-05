@@ -9,6 +9,7 @@
 
 .header {
   @include title;
+  margin-left: 24px;
 }
 
 .select {
@@ -18,5 +19,6 @@
   background: $white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  margin-right: 14px;
 }
 

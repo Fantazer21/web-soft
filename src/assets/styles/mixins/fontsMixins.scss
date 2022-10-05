@@ -21,6 +21,21 @@
   color: $grey3;
 }
 
+@mixin dataHeader {
+  @include headerTitle;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: $grey1;
+}
+
+@mixin dataContent {
+  @include headerTitle;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 @mixin label {
   @include headerTitle;
   font-weight: 400;
@@ -28,6 +43,7 @@
   line-height: 15px;
   color: $grey2;
 }
+
 @mixin buttonTitle {
   font-family: 'Inter';
   font-style: normal;
@@ -35,4 +51,11 @@
   font-size: 12px;
   text-align: center;
   color: $grey2;
+}
+@mixin price {
+  @include headerTitle;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: $grey1;
 }

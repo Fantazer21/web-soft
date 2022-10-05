@@ -8,38 +8,37 @@ type InputForm = {
     title: string,
     label: string,
     height?: string
-    setValue?: () => void
     requiredField: boolean
     inputValidation?: boolean,
-    setState: Function,
-    state: { [key: string]: InputType }
+    data: { [key: string]: InputType }
+    setState: Function
 }
 
-
-const InputForm = ({title, height, setValue, requiredField, label, inputValidation, setState, id, state}: InputForm) => {
-
-
-    const [active, setActive] = useState(false)
-
-    const [ startValue, setStartValue] = useState("")
-
+const InputForm = ({
+                       title,
+                       height,
+                       requiredField,
+                       label,
+                       id,
+                       data,
+                       setState
+                   }: InputForm) => {
     return (
-        <div onClick={() => setActive(true)} className={styles.inputWrapper}>
+        <div className={styles.inputWrapper}>
             <div className={styles.inputTitleWrapper}>
                 <div className={styles.inputTitle}>{title}</div>
                 {requiredField ? <div className={styles.dot}></div> : null}
             </div>
-            {/*<OutsideClickHandler onOutsideClick={() => {*/}
-
-            {/*    if(startValue.length) {*/}
-            {/*        setState({...state, inputValidation: true })*/}
-            {/*    }*/}
-            {/*    setStartValue("")*/}
-            {/*}}>*/}
-                <input style={{height: height}} type="text" className={`${styles.input}`}
-                       onChange={(e) => setStartValue(  e.currentTarget.value)}/>
-            {/*</OutsideClickHandler>*/}
-            {!active ? <div className={styles.label}>{label}</div> : null}
+            <div className={styles.wrapper}>
+                <input placeholder={label} style={{height: height}} type="text" className={`${styles.input}`}
+                       onChange={(e) => {
+                           console.log()
+                           if (e.currentTarget.value.length) {
+                               setState({...data, [id]: {...data[id], inputValidation: true}})
+                           } else
+                               setState({...data, [id]: {...data[id], inputValidation: false}})
+                       }}/>
+            </div>
         </div>
     );
 };
